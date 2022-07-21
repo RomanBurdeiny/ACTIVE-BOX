@@ -67,6 +67,11 @@
    border-bottom: 2px solid white;
    padding-bottom: 34px;
 }
+.activebox__links__choice:active{
+   border-bottom: 2px solid #E71414;;
+   padding-bottom: 34px;
+   color: #E71414;;
+}
 .burger__nenu{
    display: none;
 }
@@ -147,6 +152,9 @@
    width: 100px;
    height: 100px;
 }
+path:hover{
+   fill: #808080;
+}
 .benfits__choice__enumeration__article{
    width: 100%;
    padding: 30px 0;
@@ -184,12 +192,13 @@
 }
 .project__block__works{
    width: 50%;
-   min-width: 140px;
+   min-width: 190px;
    position: relative;
    display: flex;
    background: rgba(255, 65, 65);
 }
 .project__img__works{
+   display: block;
    max-width: 100%;
    min-width: 140px;
    position: relative;
@@ -244,7 +253,7 @@
 }
 .people__choice__personality{
    max-width: 270px;
-   min-width: 250px;
+   min-width: 220px;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -320,6 +329,21 @@
    line-height: 15px;
    text-transform: uppercase;
    color: #FFFFFF;
+}
+.slider__rows{
+   display: flex;
+   margin: 31px auto;
+   width: 170px;
+   justify-content: space-between;
+}
+.slider__rows__passive{
+   width: 14px;
+   height: 14px;
+   border-radius: 50%;
+   border: 1px solid #7E5D6F;
+}
+.slider__rows__active{
+background-color: #7E5D6F;
 }
 .download__menu{
    margin: 0 auto;
@@ -574,6 +598,8 @@
    }
    .people__choice__personality{
       margin: 28px auto;
+      max-width: 270px;
+      min-width: 270px;
    }
 }
 @media (max-width: 420px){
@@ -634,5 +660,17 @@
    }
    .benfits__choice__enumeration:nth-child(1){
       margin: 20px auto;
+   }
+   .people__choice__personality{
+      max-width: 300px;
+      min-width: 220px;
+   }
+   .project__img{
+      justify-content: center;
+      width: 100%;
+   }
+   .project__block__works{
+      width: 100%;
+      min-width: 170px;
    }
 } 
