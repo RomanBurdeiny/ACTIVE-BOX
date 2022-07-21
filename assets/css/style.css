@@ -67,6 +67,9 @@
    border-bottom: 2px solid white;
    padding-bottom: 34px;
 }
+.burger__nenu{
+   display: none;
+}
 .activebox__article{
    margin: 0 auto;
    padding: 0 20px 120px;
@@ -181,14 +184,14 @@
 }
 .project__block__works{
    width: 50%;
-   min-width: 200px;
+   min-width: 140px;
    position: relative;
    display: flex;
    background: rgba(255, 65, 65);
 }
 .project__img__works{
    max-width: 100%;
-   min-width: 200px;
+   min-width: 140px;
    position: relative;
    cursor: pointer;
    z-index: 1;
@@ -257,7 +260,7 @@
 }
 .people__choice__personality{
    max-width: 270px;
-   min-width: 210px;
+   min-width: 250px;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -375,7 +378,7 @@
 }
 .footer__links__card {
    max-width: 370px;
-   min-width: 300px;
+   min-width: 280px;
 }
 .footer__links__card__title {
    font-family: 'Raleway';
@@ -662,7 +665,40 @@
    .footer__author__name {
    }
 }
-@media (max-width: 760px){
+@media (max-width: 780px){
+   .activebox{
+      border: none;
+   }
+   .activebox__links{
+      display: none;
+   }
+   .activebox__logo{
+      margin: 30px 0;
+   }
+   .burger__nenu {
+      display: inline-block;
+      cursor: pointer;
+   }
+   
+   .bar1, .bar2, .bar3 {
+      width: 24px;
+      height: 3px;
+      background-color: #FFFFFF;
+      margin: 4.5px 0;
+      transition: 0.4s;
+   }
+   
+   .change .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+      transform: rotate(-45deg) translate(-9px, 6px);
+   }
+   
+   .change .bar2 {opacity: 0;}
+   
+   .change .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px);
+      transform: rotate(45deg) translate(-5px, -2px);
+   }
    .slider{
       display: flex;
       flex-direction: column;
@@ -680,4 +716,53 @@
    .slider__text__person{
       padding: 40px 0 90px;
    }
+   .people__choice__personality{
+      margin: 28px auto;
+   }
 }
+@media (max-width: 420px){
+   .activebox__logo{
+      width: 103px;
+      height: 15px;
+   }
+   .activebox__article__headline{
+      font-size: 36px;
+      line-height: 42px;
+      margin: 50px auto 32px;
+   }
+   .activebox__article__text{
+      font-size: 14px;
+      line-height: 16px;
+      margin: 0 auto 50px;
+   }
+   .activebox__btn{
+      width: 280px;
+      height: 60px;
+   }
+   .people__choice__personality{
+      width: 280px;
+   }
+   .people__choice__personality__img{
+      width: 100%;
+      display: block;
+   }
+   .slider__text__information{
+      margin: 10px;
+   }
+   .slider__text__person{
+      margin: 10px;
+   }
+   .wrapper__mob{
+      padding: 0;
+   }
+   .footer__links{
+      padding: 30px 20px;
+   }
+   .footer__links__card__networks{
+      padding: 0 80px;
+   }
+   .footer__links__card{
+      width: 280px;
+      min-width: none;
+   }
+} 
