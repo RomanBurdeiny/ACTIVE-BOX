@@ -671,6 +671,9 @@ background-color: #7E5D6F;
    }
    .project__block__works{
       width: 100%;
-      min-width: 170px;
+      min-width: 160px;
+   }
+   .download__menu{
+      margin: 0 auto 45px;
    }
 } 
