@@ -7,7 +7,7 @@
    list-style-type: none;
 }
 .active__background{
-   margin: 0 auto;
+   margin: 0 auto 58px;
    background: url(../img/activebox.svg);
    background-size: cover;
    background-repeat: no-repeat;
@@ -30,25 +30,26 @@
 }
 .activebox{
    position: relative;
-   margin: 0 auto;
+   margin: 0 auto ;
    max-width: 1200px;
+   padding: 0 20px;
    display: flex;
    flex-direction: row;
    align-items: center;
    justify-content: space-between;
-   border-bottom: 1px solid #fff;
+   border-bottom: 1px solid #BABBC5;
    z-index: 3;
 }
 .activebox__logo{
    display: flex;
    flex-direction: row;
-   width: 200px;
+   width: 183px;
    height: 27px;
-   viewBox
 }
 .activebox__links{
    display: flex;
    flex-direction: row;
+   overflow: hidden;
 }
 .activebox__links__choice{
    color: #fff;
@@ -68,6 +69,7 @@
 }
 .activebox__article{
    margin: 0 auto;
+   padding: 0 20px 120px;
    max-width: 1200px;
    display: flex;
    flex-direction: column;
@@ -92,11 +94,12 @@
    line-height: 28px;
    text-align: center;
    color: #FFFFFF;
+   margin: 0 auto 80px;
 }
-.activebox__article__btn{
-   width: 33%;
+.activebox__btn{
+   width: 370px;
    height: 80px;
-   margin: 82px auto 120px;
+   margin: 0 auto ;
    border: none;
    cursor: pointer;
    background-color: #FF4343;
@@ -109,18 +112,18 @@
    color: #FFFFFF;
    transition: 0.3s;
 }
-.activebox__article__btn:hover{
+.activebox__btn:hover{
    background: #E71414;
    transition: 0.3s;
 }
-.activebox__article__btn:active{
+.activebox__btn:active{
    background: #FF4343;
    box-shadow: 4px 4px 30px #FF4343;
 }
 .wrapper{
    max-width: 1200px;
-   margin: 58px auto;
-   padding: 0 15px;
+   margin: 0 auto;
+   padding: 58px 20px;
 }
 .benefits__choice{
    margin: 0 auto;
@@ -131,14 +134,18 @@
 }
 .benfits__choice__enumeration{
    max-width: 370px;
-   min-width: 315px;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    margin: 40px 0;
 }
+.benfits__choice__enumeration__img{
+   width: 100px;
+   height: 100px;
+}
 .benfits__choice__enumeration__article{
+   width: 100%;
    padding: 30px 0;
    font-family: 'Raleway';
    font-weight: 900;
@@ -149,6 +156,7 @@
    color: #2D3033;
 }
 .benfits__choice__enumeration__text{
+   width: 100%;
    font-family: 'Raleway';
    font-weight: 400;
    font-size: 18px;
@@ -156,41 +164,91 @@
    text-align: center;
    color: #6C7279;
 }
-.project{
-   margin: 0 auto;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-}
 .project__img{
    margin: 0 auto;
-   width: 1200px;
-   height: 350px;
+   width: 100%;
    display: flex;
-   gap: 5px;
-   flex: wrap;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.project__img__block{
+   display: flex;
+   width: 50%;
+   flex-wrap: wrap;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+}
+.project__block__works{
+   width: 50%;
+   min-width: 200px;
+   position: relative;
+   display: flex;
+   background: rgba(255, 65, 65);
 }
 .project__img__works{
-   height: 100%;
-   flex: 1;
-   object-fit: cover;
-   overflow: hidden;
+   max-width: 100%;
+   min-width: 200px;
+   position: relative;
    cursor: pointer;
+   z-index: 1;
    transition: all 0.3s;
+   background: rgba(255, 65, 65, 0.8);
 }
+/* .project__img__works::after{
+   content: "";
+   position: absolute;
+   background: #252B49;
+   mix-blend-mode: normal;
+   opacity: 0.8;
+   height:100%;
+   width:100%;
+   top:0;
+   left:0;
+   z-index: 2;
+}
+.project__img__works:hover::after{
+   opacity: 0.2;
+   z-index: 3;
+} */
 .project__img__works:hover{
-   flex: 2;
-   /* background: rgba(255, 67, 67, 0.8); */
-   height: 100%;
-   width: 370px;
-   /* object-fit: fill; */
+   opacity: 0.2;
+   z-index: 2;
 }
-.people{
-   margin: 115px auto;
+.project__block__works:active{
+   transition: all 0.3s;
+   background: rgba(185, 12, 12);
+}
+.project__block__works__title{
+   display: block;
+   width: 100%;
+   position: absolute;
+   top: 35%;
+   margin: 0 auto;
+   color: #FFFFFF;
+   font-family: 'Raleway';
+   font-weight: 900;
+   font-size: 24px;
+   line-height: 28px;
+   text-align: center;
+   text-transform: uppercase;
+}
+.project__block__works__subtitle{
+   display: block;
+   width: 100%;
+   position: absolute;
+   top: 55%;
+   margin: 0 auto;
+   font-family: 'Raleway';
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 21px;
+   text-align: center;
+   color: #FFFFFF;
+   text-transform: capitalize;
 }
 .people__choie{
-   width: 1200px;
-   max-width: calc(100% - 20px);
+   width: 100%;
    margin: 0 auto;
    display: flex;
    justify-content: center;
@@ -198,14 +256,16 @@
    flex-wrap: wrap;
 }
 .people__choice__personality{
-   width: 270px;
+   max-width: 270px;
+   min-width: 210px;
    display: flex;
    flex-direction: column;
    justify-content: center;
-   margin: 0 15px;
+   margin: 0 auto;
 }
 .people__choice__personality__img{
-   width: 270px;
+   width: 100%;
+   height: 100%;
    position: relative;
    overflow: hidden;
 }
@@ -235,11 +295,14 @@
    line-height: 21px;
    color: #6C7279;
 }
+.svg__links{
+   width: 39px;
+   height: 39px;
+}
 .slider{
    display: flex;
    margin: 0 auto;
    flex-direction: row;
-   max-width: 1500px;
 }
 .slider__photo{
    width: 50%;
@@ -252,7 +315,7 @@
    background: #5C3249;
 }
 .slider__text__information{
-   margin: 0 130px 0 170px;
+   margin: 0 80px 0 60px;
    font-family: 'Cardo';
    font-style: italic;
    font-weight: 400;
@@ -262,7 +325,7 @@
    color: #FFFFFF;
 }
 .slider__text__person{
-   margin: 0 130px 0 170px;
+   margin: 0 80px 0 60px;
    padding: 6px;
    font-family: 'Raleway';
    font-weight: 700;
@@ -270,4 +333,351 @@
    line-height: 15px;
    text-transform: uppercase;
    color: #FFFFFF;
+}
+.download__menu{
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+
+}
+.download__menu__title {
+   padding: 30px;
+   font-family: 'Raleway';
+   font-weight: 500;
+   font-size: 30px;
+   line-height: 35px;
+   text-align: center;
+   text-transform: uppercase;
+}
+.download__menu__text {
+   font-family: 'Raleway';
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 21px;
+   text-align: center;
+   text-transform: uppercase;
+   margin: 0 auto 48px;
+}
+.footer {
+   display: flex;
+   flex-direction: column;
+   margin: 0 auto;
+   background-color: #353C65;
+
+}
+.footer__links {
+   display: flex;
+   flex-direction: row;
+   margin: 0 auto;
+   padding: 70px 15px;
+   justify-content: space-between;
+
+}
+.footer__links__card {
+   max-width: 370px;
+   min-width: 300px;
+}
+.footer__links__card__title {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 21px;
+   text-align: center;
+   text-transform: uppercase;
+   color: #FFFFFF;
+   padding-bottom: 30px;
+}
+.footer__links__card__subtitle {
+   font-family: 'Raleway';
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 21px;
+   text-align: center;
+   text-transform: capitalize;
+   color: #FFFFFF;
+}
+.footer__links__card__networks {
+   padding: 0 60px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+.footer__author_bck{
+   width: 100%;
+   background: #2C3154;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+.footer__author {
+   margin: 0 auto;
+   max-width: 370px;
+   padding: 24px 0;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 21px;
+   text-align: center;
+   text-transform: capitalize;
+   color: #808080;
+}
+.footer__author__name{
+   cursor: pointer;
+   color: #FFFFFF;
+}
+@media (max-width: 1200px){
+   .active__background {
+   }
+   .activebox {
+   }
+   .activebox__logo {
+   }
+   .activebox__links {
+   }
+   .activebox__links__choice {
+      font-size: 13px;
+      line-height: 15px;
+   }
+   .activebox__article {
+   }
+   .activebox__article__headline {
+      font-size: 48px;
+      line-height: 56px;
+   }
+   .activebox__article__text {
+      font-size: 18px;
+      line-height: 21px;
+   }
+   .activebox__btn {
+      width: 315px;
+   }
+   .wrapper {
+   }
+   .benefits__choice {
+      justify-content: space-around;
+   }
+   .benfits__choice__enumeration {
+      max-width: 315px;
+   }
+   .benfits__choice__enumeration__img {
+      width: 85px;
+      height: 85px;
+   }
+   .benfits__choice__enumeration__article {      
+      font-size: 18px;
+      line-height: 21px;
+   }
+   .benfits__choice__enumeration__text {
+      font-size: 14px;
+      line-height: 16px;
+   }
+   .project__img {
+   }
+   .project__img__block {
+   }
+   .project__block__works {
+   }
+   .project__img__works {
+   }
+   .project__block__works__title {
+      font-size: 18px;
+      line-height: 21px;
+   }
+   .project__block__works__subtitle {
+      font-size: 18px;
+      line-height: 21px;
+   }
+   .people__choie {
+   }
+   .people__choice__personality {
+      max-width: 210px;
+   }
+   .people__choice__personality__img {
+   }
+   .people__choice__personality__name {
+      font-size: 18px;
+      line-height: 21px;
+   }
+   .people__choice__personality__job {
+      font-size: 14px;
+      line-height: 16px;
+   }
+   .people__choice__personality__about {
+      font-size: 14px;
+      line-height: 16px;
+   }
+   .people__choice__personality__links {
+   }
+   .svg__links {
+      width: 33px;
+      height: 33px;
+   }
+   .slider {
+   }
+   .slider__photo {
+   }
+   .slider__text {
+   }
+   .slider__text__information {
+      font-size: 24px;
+      line-height: 32px;
+   }
+   .slider__text__person {
+      font-size: 12px;
+      line-height: 14px;
+   }
+   .download__menu {
+   }
+   .download__menu__title {
+      font-size: 24px;
+      line-height: 28px;
+   }
+   .download__menu__text {
+      font-size: 14px;
+      line-height: 16px;
+   }
+   .footer {
+   }
+   .footer__links {
+   }
+   .footer__links__card {
+   }
+   .footer__links__card__title {
+      font-size: 14px;
+      line-height: 16px;
+   }
+   .footer__links__card__subtitle {
+      font-size: 14px;
+      line-height: 16px;
+   }
+   .footer__links__card__networks {
+   }
+   .footer__author_bck {
+   }
+   .footer__author {
+      font-size: 14px;
+      line-height: 16px;
+   }
+   .footer__author__name {
+   }
+}
+@media (max-width: 1024px){
+   .active__background {
+   }
+   .activebox {
+   }
+   .activebox__logo {
+   }
+   .activebox__links {
+   }
+   .activebox__links__choice {
+   }
+   .activebox__article {
+   }
+   .activebox__article__headline {
+      margin: 157px auto 60px;
+   }
+   .activebox__article__text {
+      margin: 0 auto 90px;
+   }
+   .activebox__btn {
+   }
+   .wrapper {
+      padding: 40px 20px;
+   }
+   .benefits__choice {
+   }
+   .benfits__choice__enumeration {
+   }
+   .benfits__choice__enumeration__img {
+   }
+   .benfits__choice__enumeration__article {
+   }
+   .benfits__choice__enumeration__text {
+   }
+   .project__img {
+   }
+   .project__img__block {
+   }
+   .project__block__works {
+   }
+   .project__img__works {
+   }
+   .project__block__works__title {
+   }
+   .project__block__works__subtitle {
+   }
+   .people__choie {
+   }
+   .people__choice__personality {
+   }
+   .people__choice__personality__img {
+   }
+   .people__choice__personality__name {
+   }
+   .people__choice__personality__job {
+   }
+   .people__choice__personality__about {
+   }
+   .people__choice__personality__links {
+   }
+   .svg__links {
+   }
+   .slider {
+   }
+   .slider__photo {
+   }
+   .slider__text {
+   }
+   .slider__text__information {
+   }
+   .slider__text__person {
+   }
+   .download__menu {
+   }
+   .download__menu__title {
+   }
+   .download__menu__text {
+   }
+   .footer {
+   }
+   .footer__links {
+      flex-wrap: wrap;
+      justify-content: space-around;
+   }
+   .footer__links__card {
+      padding: 30px 0;
+   }
+   .footer__links__card__title {
+   }
+   .footer__links__card__subtitle {
+   }
+   .footer__links__card__networks {
+   }
+   .footer__author_bck {
+   }
+   .footer__author {
+   }
+   .footer__author__name {
+   }
+}
+@media (max-width: 760px){
+   .slider{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+   }
+   .slider__photo{
+      width: 100%;
+   }
+   .slider__text{
+      width: 100%;
+   }
+   .slider__text__information{
+      padding: 20px 0 0;
+   }
+   .slider__text__person{
+      padding: 40px 0 90px;
+   }
 }
