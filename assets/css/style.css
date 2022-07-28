@@ -114,19 +114,41 @@
    font-family: 'Raleway';
    font-weight: 900;
    font-size: 24px;
+   display: inline-block;
+	overflow: hidden;
+	transition: all 0.4s cubic-bezier(.86, .01, .15, .99);
+   transition: 0.4s;
+	transform: perspective(1px) translateZ(0);
    line-height: 28px;
    text-align: center;
    text-transform: uppercase;
    color: #FFFFFF;
    transition: 0.3s;
 }
+.activebox__btn::before{
+   content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0;
+   clip-path: circle(0.1% at 50% 50%);
+	background: #E71414;
+	transition: 0.4s;
+	opacity: 1;
+}
 .activebox__btn:hover{
    background: #E71414;
    transition: 0.3s;
+   box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
 }
 .activebox__btn:active{
    background: #FF4343;
    box-shadow: 4px 4px 30px #FF4343;
+}
+.activebox__btn:hover::before {
+	clip-path: circle(100% at 50% 50%);
 }
 .wrapper{
    max-width: 1200px;
@@ -151,9 +173,12 @@
 .benfits__choice__enumeration__img{
    width: 100px;
    height: 100px;
+   fill: #FF4343;
+   cursor: pointer;
+   transition: all 0.3s;
 }
-path:hover{
-   fill: #808080;
+.benfits__choice__enumeration__img:hover{
+   fill: #E71414;
 }
 .benfits__choice__enumeration__article{
    width: 100%;
